@@ -1,0 +1,8 @@
+*/.classpath
+*/.project
+*/.settings/*
+*/.settings
+*/.settings/
+*.prefs
+*/.gitignore
+*/bin/*
