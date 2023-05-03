@@ -6,3 +6,4 @@
 *.prefs
 */.gitignore
 */bin/*
+*/.vscode
