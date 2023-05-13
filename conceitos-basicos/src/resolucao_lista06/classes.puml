@@ -4,59 +4,29 @@
 skinparam linetype ortho
 
 class Aluno {
-    ' - id : int
     - nome : String
     - endereco : String
     - telefone : String
-    - data_nascimento : String 
+    - dataNascimento : String 
 }
 
 class Curso {
-    ' - id
     - nome : String
     - descricao : String
-    - carga_horaria : int
-    - data_inicio : String
-    - data_fim : String
+    - cargaHoraria : int
+    - dataInicio : String
+    - dataFim : String
 }
 
 class Turma {
-    ' - id : int
     - nome : String
     - matriculas : List<Matricula>
 }
 
 class Matricula {
-    ' - id : int
     - codigo: String
     - aluno : Aluno
     - curso : Curso
-    - data_matricula : String
+    - dataMatricula : String
 }
-
-' class Conexao {
-'     - host : String
-'     - db : String
-'     - user : String
-'     - password : String
-'     + conectar() : PDO
-' }
-
-' class AlunoDao {
-'     - conexao : Conexao
-'     + inserir(aluno : Aluno) : void
-'     + listar_tudo() : Array<Aluno>
-' }
-
-' class CursoDao {
-'     - conexao : Conexao
-'     + inserir(curso : Curso) : void
-'     + listar_tudo() : Array<Curso>
-' }
-
-' class TurmaDao {
-'     - conexao : Conexao
-'     + inserir(turma : Turma) : void
-'     + listar_tudo() : Array<Turma>
-' }
 @enduml
