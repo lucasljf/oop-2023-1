@@ -1,0 +1,63 @@
+@startuml classes
+
+' hide circle
+' skinparam linetype ortho
+
+class App {
+    +main()
+}
+
+class AuxiliarAdm {
+    - horasTrabalhadas: double
+    - valorHora: double
+}
+
+class Cartao {
+    - diaVencimento: int
+    - diaPagamento: int
+    - valor: double
+}
+
+class Conta {
+    - diaVencimento: int
+    - diaPagamento: int
+    - valor: double
+}
+
+class Fornecedor {
+    - nome: String
+}
+
+class Gerente {
+    - auxiliares: AuxiliarAdm[3]
+    - salario: double
+    - horasExtras: double
+    - valorHoraExtra: double
+}
+
+class NotaFiscal {
+    - fornecedor: Fornecedor
+    - valor: double
+    - valorFrete: double
+}
+
+abstract class Funcionario {
+    - nome: String
+    - matricula: String
+    + getFicha(): String
+}
+
+interface IPagavel {
+    + getValorAPagar(): double
+    + getDescricao(): String
+}
+
+Funcionario <|-- Gerente
+Funcionario <|-- AuxiliarAdm 
+Fornecedor -- NotaFiscal
+IPagavel <|-- Funcionario
+IPagavel <|-- Cartao
+IPagavel <|-- Conta
+IPagavel <|-- NotaFiscal
+
+@enduml
