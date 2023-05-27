@@ -1,0 +1,47 @@
+package dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+import banco.Conexao;
+import model.Cidade;
+
+public class CidadeDao {
+	private Connection conexao;
+
+	public CidadeDao() {
+		this.conexao = Conexao.getConexao();
+	}
+
+	public void inserir(Cidade c) {
+		String sql = "INSERT INTO tb_cidade (nome, estado) VALUES (?, ?)";
+		try {
+			PreparedStatement stmt = conexao.prepareStatement(sql);
+			stmt.setString(1, c.getNome());
+			stmt.setString(2, c.getEstado());
+			stmt.execute();
+			stmt.close();
+		} catch (Exception e) {
+			throw new RuntimeException();
+		}
+	}
+
+	public Cidade buscarPorId(int id) {
+		String sql = "SELECT * FROM tb_cidade WHERE id = ?";
+		try {
+			PreparedStatement stmt = conexao.prepareStatement(sql);
+			stmt.setInt(1, id);
+			
+			ResultSet resultado = stmt.executeQuery();
+			
+			resultado.next();
+			Cidade c = new Cidade(resultado.getInt("id"), resultado.getString("nome"), resultado.getString("estado"));
+			
+			return c;
+		} catch (Exception e) {
+			throw new RuntimeException();
+		}
+		
+	}
+}
