@@ -16,7 +16,7 @@ Exemplos de classes que acessam uma base de dados MariaDB.
 
 ## Materiais/Referências
 
-* [Docker Desktop](https://https://www.docker.com/products/docker-desktop/).
+* [Docker Desktop](https://www.docker.com/products/docker-desktop/).
 
 * [MariaDB Connector/J (JDBC driver)](https://dlm.mariadb.com/2912798/Connectors/java/connector-java-3.1.4/mariadb-java-client-3.1.4.jar).
 
