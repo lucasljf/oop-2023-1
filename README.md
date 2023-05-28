@@ -14,6 +14,12 @@ Revisão de conceitos e fundamentos básicos.
 
 Exemplos de classes que acessam uma base de dados MariaDB.
 
+
+## exemplo-gui
+(_work in progress_)
+
+Exemplo de persistência/mapeamento de objetos para um banco relacional. Criação de uma tela que permite a interação do usuário com funcionalidades do sistema. Utilização de uma classe `Controller`.
+
 ## Materiais/Referências
 
 * [Docker Desktop](https://www.docker.com/products/docker-desktop/).
