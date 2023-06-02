@@ -23,4 +23,8 @@ public class Cidade {
 		return estado;
 	}
 
+	@Override
+	public String toString() {
+		return this.nome;
+	}
 }
