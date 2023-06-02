@@ -47,37 +47,37 @@ public class CadCidadeGui extends JFrame {
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		
+
 		JLabel lblNome = new JLabel("Nome");
 		lblNome.setBounds(54, 12, 40, 15);
 		contentPane.add(lblNome);
-		
+
 		tfNome = new JTextField();
 		tfNome.setBounds(54, 39, 114, 19);
 		contentPane.add(tfNome);
 		tfNome.setColumns(10);
-		
+
 		JLabel lblEstado = new JLabel("Estado");
 		lblEstado.setBounds(54, 88, 49, 15);
 		contentPane.add(lblEstado);
-		
+
 		tfEstado = new JTextField();
 		tfEstado.setBounds(54, 104, 114, 19);
 		contentPane.add(tfEstado);
 		tfEstado.setColumns(10);
-		
+
 		JButton btnNewButton = new JButton("Cadastrar");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 //				pegar os valores dos campos
 //				CidadeController cidadeController = new CidadeController();
 //				cidadeController.salvar(tfNome.getText(), tfEstado.getText());
-				
+
 				new CidadeController().salvar(tfNome.getText(), tfEstado.getText());
 //				Limpar os campos
 //				tfNome.setText(null);
 //				tfEstado.setText(null);
-				
+
 				dispose();
 			}
 		});

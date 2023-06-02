@@ -41,11 +41,11 @@ public class AppGui extends JFrame {
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		
+
 		JLabel lblPginaInicial = new JLabel("Página Inicial");
 		lblPginaInicial.setBounds(91, 15, 94, 15);
 		contentPane.add(lblPginaInicial);
-		
+
 		JButton btnCadastrarCidade = new JButton("Cadastrar Cidade");
 		btnCadastrarCidade.setBounds(27, 106, 158, 25);
 		btnCadastrarCidade.addActionListener(new ActionListener() {
@@ -55,7 +55,7 @@ public class AppGui extends JFrame {
 			}
 		});
 		contentPane.add(btnCadastrarCidade);
-		
+
 		JButton btnCadastrarCliente = new JButton("Cadastrar Cliente");
 		btnCadastrarCliente.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -65,18 +65,18 @@ public class AppGui extends JFrame {
 		});
 		btnCadastrarCliente.setBounds(237, 106, 183, 25);
 		contentPane.add(btnCadastrarCliente);
-		
+
 		JButton btnVerCidades = new JButton("Ver cidades");
 		btnVerCidades.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 //				outra forma de fazer...
 				new ListaCidadesGui().setVisible(true);
-				
+
 			}
 		});
 		btnVerCidades.setBounds(27, 172, 117, 25);
 		contentPane.add(btnVerCidades);
-		
+
 		JButton btnVerClientes = new JButton("Ver clientes");
 		btnVerClientes.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {

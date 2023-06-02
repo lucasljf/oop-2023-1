@@ -50,21 +50,20 @@ public class ListaCidadesGui extends JFrame {
 		modelo.addColumn("id");
 		modelo.addColumn("nome");
 		modelo.addColumn("estado");
-		
-		List<Cidade> cidades = new CidadeDao().listarTodas();		
+
+		List<Cidade> cidades = new CidadeDao().listarTodas();
 		for (Cidade cidade : cidades) {
 			int id = cidade.getId();
 			String nome = cidade.getNome();
 			String estado = cidade.getEstado();
-			Object[] linha = {id, nome, estado};
+			Object[] linha = { id, nome, estado };
 			modelo.addRow(linha);
 		}
-		
+
 		JScrollPane scrollPane = new JScrollPane();
 		contentPane.add(scrollPane);
-		
+
 		JTable table_1 = new JTable(modelo);
-//		table_1.edita
 		scrollPane.setViewportView(table_1);
 	}
 

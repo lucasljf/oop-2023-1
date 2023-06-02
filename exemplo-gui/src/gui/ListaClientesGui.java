@@ -54,21 +54,21 @@ public class ListaClientesGui extends JFrame {
 		modelo.addColumn("idade");
 		modelo.addColumn("cidade");
 		modelo.addColumn("estado");
-		
-		List<Cliente> clientes = new ClienteDao().listarTodos();		
-		for (Cliente cliente: clientes) {
+
+		List<Cliente> clientes = new ClienteDao().listarTodos();
+		for (Cliente cliente : clientes) {
 			int id = cliente.getId();
 			String nome = cliente.getNome();
 			int idade = cliente.getIdade();
 			String cidade = cliente.getCidade().getNome();
 			String estado = cliente.getCidade().getEstado();
-			Object[] linha = {id, nome, idade, cidade, estado};
+			Object[] linha = { id, nome, idade, cidade, estado };
 			modelo.addRow(linha);
 		}
-		
+
 		JScrollPane scrollPane = new JScrollPane();
 		contentPane.add(scrollPane);
-		
+
 		JTable table_1 = new JTable(modelo);
 		scrollPane.setViewportView(table_1);
 	}

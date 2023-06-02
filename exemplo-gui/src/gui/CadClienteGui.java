@@ -51,33 +51,33 @@ public class CadClienteGui extends JFrame {
 
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-		
+
 		JLabel lblNome = new JLabel("Nome");
 		lblNome.setBounds(12, 12, 70, 15);
 		contentPane.add(lblNome);
-		
+
 		tfNome = new JTextField();
 		tfNome.setBounds(12, 39, 388, 19);
 		contentPane.add(tfNome);
 		tfNome.setColumns(10);
-		
+
 		JLabel lblIdade = new JLabel("Idade");
 		lblIdade.setBounds(12, 70, 70, 15);
 		contentPane.add(lblIdade);
-		
+
 		tfIdade = new JTextField();
 		tfIdade.setBounds(12, 99, 114, 19);
 		contentPane.add(tfIdade);
 		tfIdade.setColumns(10);
-		
+
 		JLabel lblCidade = new JLabel("Cidade");
 		lblCidade.setBounds(183, 70, 70, 15);
 		contentPane.add(lblCidade);
-		
+
 		JComboBox<Cidade> cbCidade = new JComboBox<Cidade>();
 		cbCidade.setBounds(183, 96, 217, 24);
 //		cbCidade.addItem("item1");
-		
+
 		List<Cidade> cidades = new CidadeDao().listarTodas();
 		for (Cidade cidade : cidades) {
 //			cbCidade.addItem(cidade.getNome());
@@ -85,7 +85,7 @@ public class CadClienteGui extends JFrame {
 		}
 //		cbCidade.addItem(new CidadeDao().listarTodas());
 		contentPane.add(cbCidade);
-		
+
 		JButton btnNewButton = new JButton("Cadastrar");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
